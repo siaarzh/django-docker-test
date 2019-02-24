@@ -11,10 +11,10 @@ This is an educational project in order to learn:
 The included docker-compose.yml file is only a *template*. To launch the app or
 start development there are some caveats that need to be taken into account:
 
-- Django is also a command line tool that enables building of websitesusing boiler
-plate Python code.
+- Django is also a command line tool that enables building of websites using
+boiler plate Python code.
 - Docker runs most default containers as 'root'.
-- All Python packages required by the project are installed in thedevelopment
+- All Python packages required by the project are installed in the development
 (and production) container. There are no virtual or vagrant environments.
 - Development environment requires bind mounts, so that all of our code remains
 in one place.
