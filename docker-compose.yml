@@ -1,0 +1,19 @@
+version: "3.6"
+
+# !!!                IMPORTANT                !!!
+#   Start stack using the start_stack.sh script
+
+services:
+  db:
+    image: postgres:9.6
+  mysite:
+    image: mysite:latest
+    build: ./docker/django/Dockerfile
+    command: python manage.py runserver 0.0.0.0:8000
+    user: ${CURRENT_UID}
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
